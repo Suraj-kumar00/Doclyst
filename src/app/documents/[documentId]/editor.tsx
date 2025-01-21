@@ -12,6 +12,8 @@ import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
 import Image from "@tiptap/extension-image";
+import { Color } from "@tiptap/extension-color";
+import Highlight from "@tiptap/extension-highlight";
 import { useEditorStore } from "@/store/use-editor-store";
 import Underline from "@tiptap/extension-underline";
 
@@ -61,7 +63,10 @@ export const Editor = () => {
       TableRow,
       TableHeader,
       TableCell,
-
+      Color,
+      Highlight.configure({
+        multicolor: true,
+      }),
       TaskItem.configure({
         nested: true,
       }),
